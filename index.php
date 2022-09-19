@@ -22,5 +22,43 @@
 </html>
 
 <?php 
-//GitHub
+//$_GET
+//$_POST
+
+//$_SERVER - inforamcinis superglobalus kintamasis, kuris pasiekiamas visame projekte
+//mes į server kintamąjį pasidėti reikšmių NEGALIME.
+
+var_dump($_SERVER);
+
+
+// kokia narsykle sudare saugu rysi?
+ echo $_SERVER['HTTP_SEC_CH_UA'];
+echo "<br>";
+// kokia narsykle as naudojos
+ echo $_SERVER['HTTP_USER_AGENT']; //none - ""
+
+ //prisijungimo laikas
+echo $_SERVER['REQUEST_TIME'];
+echo "<br>";
+echo date("Y-m-d H:i:s", $_SERVER['REQUEST_TIME'] ); // reikia sureguliuoti laiko zona, utc - 0 utc - 8
+
+echo "<br>";
+//dabartine failo nuoroda(reliatyvus kelias)
+echo $_SERVER['PHP_SELF'];
+echo "<br>";
+
+//absoliutus kelias
+echo $_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
+
+
+//get_browser(); //narsykle
+
+
+//php versijos 7.4.0
+//5.4 - neveiks
+$narsykle = get_browser();
+var_dump($narsykle);
+
+//GitHub x
+// Server kintamasis
 // 2 namu darba
