@@ -15,6 +15,9 @@
         <input name="vardiklis2">
         <button type="submit">Sudeti</button>
     </form>
+
+
+    <p>Rezultatas:</p>
 </body>
 </html>
 
